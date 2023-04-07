@@ -6,7 +6,7 @@ ne_report <- fluidRow(
 
     ## General Information----
     HTML('<hr style="color: black; height: 6px; background-color: black;">'),
-    h2(HTML("NE REPORT")),
+    h2(HTML("Northeast SDAM Report")),
     h3(HTML(
       "Step 3: Enter additional information (optional)")
     ),
@@ -598,7 +598,6 @@ se_report <- fluidRow(
   column(7,
     ## General Information----
     HTML('<hr style="color: black; height: 6px; background-color: black;">'),
-    h2(HTML("NE REPORT")),
     h2(HTML("Southeast SDAM Report")),
     h3(HTML(
       "Step 3: Enter additional information (optional)")

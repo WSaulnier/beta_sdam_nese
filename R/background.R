@@ -30,18 +30,19 @@ bkgrnd <- fluidRow(
       ),
       tags$img(src="nese_regions.png", style="height: 510px", class="center-img"),
       br(),
-      tags$p("This online tool supports application of the Beta Streamflow Duration Assessment Method for the Northeast (Beta SDAM NE)
-              and the Beta Streamflow Duration Assessment Method for the Southeast (Beta SDAM SE)
+      tags$p(HTML("<a href=\"https://www.epa.gov/streamflow-duration-assessment/beta-streamflow-duration-assessment-method-northeast-and-southeast\">
+      This online tool supports application of the Beta Streamflow Duration Assessment Method for the Northeast (Beta SDAM NE)
+              and the Beta Streamflow Duration Assessment Method for the Southeast (Beta SDAM SE)</a>
              by running the developed random forest model based on entered data to obtain the classification for individual assessment reaches. The Beta SDAMs are based on the presence of biological, geospatial, and geomorphological indicators that are associated with gradients of streamflow duration. "),
-      tags$p("The NE and SE Beta SDAMs are based on eight indicators measured in the field, plus two spatial variables generated using this website. The indicators are:"),
+      tags$p("The NE and SE Beta SDAMs are based on eight indicators measured in the field, plus two spatial variables generated using this website. The indicators are:")),
       tags$ul(
         tags$li(
           HTML(
             "<p>Biological indicators:
             <br>
             <ul>
-              <li>Total abundance of aquatic benthic macroinvertebrates (Beta SDAM NE, Beta SDAM SE)</li>
-              <li>Richness of aquatic benthic macroinvertebrates (Beta SDAM NE, Beta SDAM SE)</li>
+              <li>Total abundance of aquatic benthic macroinvertebrates (Beta SDAM SE)</li>
+              <li>BMI score based on total abundance and richness of aquatic benthic macroinvertebrates (Beta SDAM NE, Beta SDAM SE)</li>
               <li>Percent shading (Beta SDAM NE)</li>
               <li>Absence of rooted upland plants in the streambed (Beta SDAM NE, Beta SDAM SE)</li>
             </ul>

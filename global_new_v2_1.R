@@ -31,7 +31,8 @@ for (r in row.names(RF_SE$importance)){
 # regions <- read_sf("./spatial/Major_SDAM_regions.shp") %>%
 #         st_transform(crs = 4326)
 # light weight version of regions shapefile to speed up leaflet rendering
-regions_leaflet <- read_sf("./spatial/simplified_regions.shp")
+regions_leaflet <- read_sf("./spatial/regions_simp_noPRVI.shp")
+
 
 
 
@@ -71,13 +72,14 @@ run_model <- function(
                                            ((user_TotalAbundance>=1) & (user_TotalAbundance<=10)~1),
                                            ((user_TotalAbundance>=11) & (user_TotalAbundance<=32)~2),
                                            user_TotalAbundance>=33~3),
-               BMI_score_alt4 = case_when(
-                 user_TotalAbundance==0 && user_richness==0~0,
-                 user_TotalAbundance>=1 && user_TotalAbundance<=3 && user_richness==0~1,
-                 user_TotalAbundance>=4 && user_TotalAbundance<10 && user_richness<5~2,
-                 user_TotalAbundance>=10 && user_TotalAbundance && user_richness>=3 && user_richness<5~3,
-                 user_TotalAbundance>=0 && user_richness>=5~3)
-  )
+               BMI_score_alt4 = case_when(user_TotalAbundance >= 10 & user_richness>=3  ~3,
+                                          user_richness >= 5~3,  
+                                          user_TotalAbundance>=4 ~2,   
+                                          user_TotalAbundance>0~1, 
+                                          T~0)
+               
+                 
+    )
 
   # print(df$lat)
   # print(df$lon)

@@ -8,14 +8,14 @@ addinfo <- fluidRow(
                        Information about this method can be found on the 
                        <a
                        href=\"
-                       https://www.epa.gov/streamflow-duration-assessment/streamflow-duration-assessment-method-great-plains\">
+                       https://www.epa.gov/streamflow-duration-assessment\">
                        Environmental Protection Agency's Beta Streamflow Duration Assessment Methods 
                        website.
                        </a> The user manual, training material, and other resources may be accessed from the 
                        <a
                        href=\"
-                       https://sdam-for-great-plains-eprusa.hub.arcgis.com/\">
-                       SDAM NESE Training Hub.</a>")
+                       https://sdam-for-ne-se-eprusa.hub.arcgis.com/\">
+                       SDAM NE & SDAM SE Training Hub.</a>")
             ),
            
            tags$p("Identification of aquatic invertebrates:"),
@@ -92,6 +92,14 @@ addinfo <- fluidRow(
               <a href =\"https://www.wildflower.org/collections/\">
                  Lady Bird Johnson Wildflower Center
               </a>(Continental U.S.)"))),
+             tags$li(tags$p(HTML(
+                 "<a href =\"https://tennessee-kentucky.plantatlas.usf.edu/\">
+               Tennessee-Kentucky Plant Atlas
+               </a>"))),
+             tags$li(tags$p(HTML(
+                 "<a href =\"https://florida.plantatlas.usf.edu/\">
+               Atlas of FLorida Plants
+               </a>"))),
            ),
 
            tags$p("Bankfull indicators:"),
@@ -107,9 +115,9 @@ addinfo <- fluidRow(
              
            ),
            tags$p(HTML(
-             "R code used to develop this application is available here: 
-             <a href =\"https://github.com/WSaulnier/beta_sdam_gp\" 
-             > https://github.com/WSaulnier/beta_sdam_gp </a>"
+             "R code used to develop this application is available  
+             <a href =\"https://github.com/WSaulnier/beta_sdam_nese\" 
+             > here. </a>"
              )
             ),
            tags$p("For additional support with this website, please contact Will Saulnier (wsaulnier@eprusa.net) 

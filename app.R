@@ -104,12 +104,12 @@ ui <- fluidPage(
                 "Web application for the Beta Streamflow Duration Assessment Methods for the Northeast and Southeast 
         ")
             ),
-            h4(HTML("<p>Version <a href=\"https://github.com/WSaulnier/NESE_Beta_SDAM/tree/beta_nese\">1.0.1</a> Release date: March 2023 </p>")),
+            h4(HTML("<p>Version <a href=\"https://github.com/WSaulnier/beta_sdam_nese\">1.0.1</a> Release date: March 2023 </p>")),
             img(src="eph.jpg", style = "height: 400px"),
             img(src="int.jpg", style = "height: 400px"),
             img(src="per.jpg", style = "height: 400px")
         ),
-        "SDAM Great Plains"
+        "NE & SE SDAMs"
     ),
     fluidRow(
         column(
@@ -124,6 +124,7 @@ ui <- fluidPage(
                 tabPanel(
                     "Enter Data", 
                     br(),
+                    h4(p(HTML("<b><u><i>This is an analysis tool and does not store data. After 60 minutes the tool will timeout and all data will have to be re-entered.</i></u></b>"),style="color:#b80404")),
                     fluidRow(column(12, h3("Step 1: Enter reach coordinates or select reach location on map."), 
                                     )),
                     # coordinates----
@@ -346,11 +347,10 @@ server <- function(input, output, session) {
                     show_alert(
                         title = "Location Error!",
                         text = tagList(
-                            tags$p(HTML(paste0("This site is located outside of the Great Plains SDAM study area.  The site is located in the <b>",
+                            tags$p(HTML(paste0("This site is located outside of the Northeast and Southeast SDAM study areas.  The site is located in the <b>",
                                                region_class()$region, "</b> SDAM region.  The ",
                                                region_class()$region, " is in the <b>",
-                                               region_class()$URL, "</b> stage. If you would like to proceed with running the Great Plains
-                                     model, you may exit this dialogue and select a Great Plains region."))
+                                               region_class()$URL, "</b> stage."))
                             )
                         ),
                         type = "error"
